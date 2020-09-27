@@ -1,13 +1,6 @@
 runmode: release
 http:
   port: 10000
-rocketMQ:
-  endpoint: http://1596415028199842.mqrest.cn-shenzhen.aliyuncs.com
-  accessKey: LTAI4FvxwhKiGHprmvUEa6pY
-  accessKeySecret: B3xI40IztHaR3BQXQ3wv92q42JZjGy
-  topic: common
-  instanceId: MQ_INST_1596415028199842_BcUAtxFI
-  groupId: GID_common
 mysql:
   master:
     addr: root:930218hX@tcp(140.143.188.219:3306)/gdraw?charset=utf8mb4&parseTime=True&loc=Local
