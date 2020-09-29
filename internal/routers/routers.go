@@ -23,6 +23,11 @@ func Init() *gin.Engine {
 		ValidateHeaders: false,
 	}))
 
+	r.GET("/health", func(context *gin.Context) {
+		context.JSON(200,map[string]string{"msg":"ok"})
+		return
+	})
+
 	r.Group("/").Use(middleware.Ws.HttpUpgrader()).GET("/", ws.Ws.Gdraw)
 
 	apiV1OpenApiGdraw := r.Group("v1/gdraw/openapi") //.Use(middleware.NewMiddleware().VerifyToken())
