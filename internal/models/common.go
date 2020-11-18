@@ -1,9 +1,11 @@
 package models
 
+import "server_gdraw/internal/models/user"
+
 type UserGameData struct {
 	RightNum int       `json:"right_num"`
 	Role     int       `json:"role"`
-	Uinfo    GdrawUser `json:"uinfo"`
+	Uinfo    user.User `json:"uinfo"`
 }
 
 type RankData struct {

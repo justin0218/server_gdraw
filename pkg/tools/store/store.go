@@ -1,14 +1,15 @@
 package store
 
 import (
-	"server_gdraw/internal/models"
+	"server_gdraw/internal/models/user_answer"
+	"server_gdraw/internal/models/user_asset"
 	"sync"
 )
 
 var (
-	GdrawDataChan    = make(chan models.GdrawUserAnswer, 64)
+	GdrawDataChan    = make(chan user_answer.UserAnswer, 64)
 	ConsumePowerChan = make(chan int, 128)
-	AddLxChan        = make(chan models.GdrawUserAsset, 128)
+	AddLxChan        = make(chan user_asset.UserAsset, 128)
 )
 
 var (

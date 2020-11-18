@@ -8,20 +8,7 @@ import (
 	"time"
 )
 
-var Ws wser
-
-type ws struct {
-}
-
-func init() {
-	Ws = &ws{}
-}
-
-type wser interface {
-	HttpUpgrader() gin.HandlerFunc
-}
-
-func (this *ws) HttpUpgrader() gin.HandlerFunc {
+func HttpUpgrader() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		wsu := websocket.Upgrader{
 			HandshakeTimeout: time.Duration(time.Second * 30),
